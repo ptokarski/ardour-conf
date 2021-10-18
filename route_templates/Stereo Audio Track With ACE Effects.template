@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Route version="6000" id="8314" name="Stereo Audio Track With ACE Effects" default-type="audio" strict-io="1" active="1" denormal-protection="0" meter-point="MeterPostFader" disk-io-point="DiskIOPreFader" meter-type="MeterPeak" audio-playlist="8359" saved-meter-point="MeterPostFader" alignment-choice="Automatic" mode="Normal">
+  <ProgramVersion created-with="Ardour 6.9" modified-with="Ardour 6.9" name="Stereo Audio Track With ACE Effects"/>
+  <PresentationInfo order="2" flags="AudioTrack,OrderSet" color="1921902079"/>
+  <Controllable name="solo" id="8322" flags="Toggle,RealTime" value="0" self-solo="0" soloed-by-upstream="0" soloed-by-downstream="0"/>
+  <Controllable name="solo-iso" id="8328" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
+  <Controllable name="solo-safe" id="8330" flags="Toggle" value="0" solo-safe="0"/>
+  <IO name="Stereo Audio Track With ACE Effects" id="8342" direction="Input" default-type="audio">
+    <Port type="audio" name="Stereo Audio Track With ACE Effects/audio_in 1">
+      <Connection other="system:capture_2"/>
+    </Port>
+    <Port type="audio" name="Stereo Audio Track With ACE Effects/audio_in 2">
+      <Connection other="system:capture_1"/>
+    </Port>
+  </IO>
+  <IO name="Stereo Audio Track With ACE Effects" id="8343" direction="Output" default-type="audio">
+    <Port type="audio" name="Stereo Audio Track With ACE Effects/audio_out 1">
+      <Connection other="Master/audio_in 1"/>
+    </Port>
+    <Port type="audio" name="Stereo Audio Track With ACE Effects/audio_out 2">
+      <Connection other="Master/audio_in 2"/>
+    </Port>
+  </IO>
+  <MuteMaster mute-point="PostFader,Listen,Main" muted="0"/>
+  <Controllable name="mute" id="8324" flags="Toggle,RealTime" value="0"/>
+  <Controllable name="phase" id="8326" flags="Toggle" value="0" phase-invert="00"/>
+  <Automation>
+    <AutomationList automation-id="solo" id="8321" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="solo-iso" id="8327" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="solo-safe" id="8329" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="mute" id="8323" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="rec-enable" id="8353" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="rec-safe" id="8355" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="phase" id="8325" interpolation-style="Discrete" state="Off"/>
+    <AutomationList automation-id="monitor" id="8357" interpolation-style="Discrete" state="Off"/>
+  </Automation>
+  <Pannable>
+    <Controllable name="pan-azimuth" id="8333" flags="" value="0.5"/>
+    <Controllable name="pan-width" id="8337" flags="" value="0"/>
+    <Controllable name="pan-elevation" id="8335" flags="" value="0"/>
+    <Controllable name="pan-frontback" id="8339" flags="" value="0"/>
+    <Controllable name="pan-lfe" id="8341" flags="" value="0"/>
+    <Automation>
+      <AutomationList automation-id="pan-azimuth" id="8332" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="pan-elevation" id="8334" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="pan-width" id="8336" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="pan-frontback" id="8338" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="pan-lfe" id="8340" interpolation-style="Linear" state="Off"/>
+    </Automation>
+  </Pannable>
+  <Processor id="8352" name="recorder:Stereo Audio Track With ACE Effects" active="1" user-latency="0" use-user-latency="0" type="diskwriter" record-safe="0"/>
+  <Processor id="8351" name="player:Stereo Audio Track With ACE Effects" active="1" user-latency="0" use-user-latency="0" type="diskreader"/>
+  <Processor id="8345" name="Polarity" active="1" user-latency="0" use-user-latency="0" type="polarity"/>
+  <Processor id="8347" name="Amp" active="1" user-latency="0" use-user-latency="0" type="trim">
+    <Automation>
+      <AutomationList automation-id="trim" id="8319" interpolation-style="Logarithmic" state="Off"/>
+    </Automation>
+    <Controllable name="trimcontrol" id="8320" flags="GainLike" value="1"/>
+  </Processor>
+  <Processor id="8344" name="Amp" active="1" user-latency="0" use-user-latency="0" type="amp">
+    <Automation>
+      <AutomationList automation-id="gain" id="8317" interpolation-style="Exponential" state="Off"/>
+    </Automation>
+    <Controllable name="gaincontrol" id="8318" flags="GainLike" value="1"/>
+  </Processor>
+  <Processor id="10207" name="ACE Amplifier" active="1" user-latency="0" use-user-latency="0" type="luaproc" unique-id="ab0881f761420ca67ad08856c7daf5c2b13a0d49" count="1" custom="0">
+    <Automation>
+      <AutomationList automation-id="parameter-0" id="10208" interpolation-style="Linear" state="Off"/>
+    </Automation>
+    <ConfiguredInput>
+      <Channels type="audio" count="2"/>
+    </ConfiguredInput>
+    <CustomSinks>
+      <Channels type="audio" count="2"/>
+    </CustomSinks>
+    <ConfiguredOutput>
+      <Channels type="audio" count="2"/>
+    </ConfiguredOutput>
+    <PresetOutput/>
+    <InputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+      <Channelmap type="audio" from="1" to="1"/>
+    </InputMap-0>
+    <OutputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+      <Channelmap type="audio" from="1" to="1"/>
+    </OutputMap-0>
+    <ThruMap/>
+    <luaproc last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0">
+      <script lua="Lua 5.3" origin="/usr/local/share/ardour6/scripts/amp5.lua">YXJkb3VyIHsKCVsidHlwZSJdICAgID0gImRzcCIsCgluYW1lICAgICAgICA9ICJBQ0UgQW1wbGlmaWVyIiwKCWNhdGVnb3J5ICAgID0gIkFtcGxpZmllciIsCglsaWNlbnNlICAgICA9ICJNSVQiLAoJYXV0aG9yICAgICAgPSAiQXJkb3VyIENvbW11bml0eSIsCglkZXNjcmlwdGlvbiA9IFtbVmVyc2F0aWxlICsvLSAyMGRCIG11bHRpY2hhbm5lbCBhbXBsaWZpZXJdXQp9CgpmdW5jdGlvbiBkc3BfaW9jb25maWcgKCkKCXJldHVybgoJewoJCS0tIC0xLCAtMSA9IGFueSBudW1iZXIgb2YgY2hhbm5lbHMgYXMgbG9uZyBhcyBpbnB1dCBhbmQgb3V0cHV0IGNvdW50IG1hdGNoZXMKCQl7IGF1ZGlvX2luID0gLTEsIGF1ZGlvX291dCA9IC0xfSwKCX0KZW5kCgoKZnVuY3Rpb24gZHNwX3BhcmFtcyAoKQoJcmV0dXJuCgl7CgkJeyBbInR5cGUiXSA9ICJpbnB1dCIsIG5hbWUgPSAiR2FpbiIsIG1pbiA9IC0yMCwgbWF4ID0gMjAsIGRlZmF1bHQgPSAwLCB1bml0PSJkQiJ9LAoJfQplbmQKCmxvY2FsIHNyID0gNDgwMDAKbG9jYWwgY3VyX2dhaW4gPSAxCgpmdW5jdGlvbiBkc3BfaW5pdCAocmF0ZSkKCXNyID0gcmF0ZQplbmQKCmZ1bmN0aW9uIGRzcF9jb25maWd1cmUgKGlucywgb3V0cykKCW5fb3V0ICAgPSBvdXRzCgluX2F1ZGlvID0gb3V0czpuX2F1ZGlvICgpCglhc3NlcnQgKG91dHM6bl9taWRpICgpID09IDApCmVuZAoKLS0gdGhlIERTUCBjYWxsYmFjayBmdW5jdGlvbgpmdW5jdGlvbiBkc3BfcnVubWFwIChidWZzLCBpbl9tYXAsIG91dF9tYXAsIG5fc2FtcGxlcywgb2Zmc2V0KQoJLS0gYXBwbHkgSS9PIG1hcAoJQVJET1VSLkRTUC5wcm9jZXNzX21hcCAoYnVmcywgbl9vdXQsIGluX21hcCwgb3V0X21hcCwgbl9zYW1wbGVzLCBvZmZzZXQpCgoJbG9jYWwgY3RybCA9IEN0cmxQb3J0czphcnJheSgpIC0tIGdldCBjb250cm9sIHBvcnQgYXJyYXkKCWxvY2FsIHRhcmdldF9nYWluICA9IEFSRE9VUi5EU1AuZEJfdG9fY29lZmZpY2llbnQgKGN0cmxbMV0pIC0tIDEwIF4gKDAuMDUgKiBjdHJsWzFdKQoJbG9jYWwgY3VycmVudF9nYWluID0gY3VyX2dhaW4gLS0gc3RhcnQgd2l0aCB0aGUgc2FtZSBmb3IgYWxsIGNoYW5uZWxzCgljdXJfZ2FpbiA9IHRhcmdldF9nYWluIC0tIHVzZSB0YXJnZXQgZ2FpbiBpZiBubyBjaGFubmVsIGlzIG1hcHBlZC4KCglmb3IgYyA9IDEsIG5fYXVkaW8gZG8KCQlsb2NhbCBvYiA9IG91dF9tYXA6Z2V0IChBUkRPVVIuRGF0YVR5cGUgKCJhdWRpbyIpLCBjIC0gMSk7IC0tIGdldCBpZCBvZiBtYXBwZWQgb3V0cHV0IGJ1ZmZlciBmb3IgZ2l2ZW4gY2FubmVsCgkJaWYgKG9iIH49IEFSRE9VUi5DaGFuTWFwcGluZy5JbnZhbGlkKSB0aGVuCgkJCWN1cl9nYWluID0gQVJET1VSLkFtcC5hcHBseV9nYWluIChidWZzOmdldF9hdWRpbyhvYiksIHNyLCBuX3NhbXBsZXMsIGN1cnJlbnRfZ2FpbiwgdGFyZ2V0X2dhaW4sIG9mZnNldCkKCQllbmQKCWVuZAoKLS1bWwoJaWYgY3VycmVudF9nYWluIH49IGN1cl9nYWluIHRoZW4KCQlzZWxmOnF1ZXVlX2RyYXcgKCkgLS0gbm90aWZ5IGRpc3BsYXkKCWVuZAotLV1dCmVuZAoKLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQotLS0gaW5saW5lIGRpc3BsYXkgKyB0ZXh0IGV4YW1wbGUKCi0tW1sKbG9jYWwgdHh0ID0gbmlsIC0tIGNhY2hlIHBhbmdvIGNvbnRleHQgZ2xvYmFsbHkKCmZ1bmN0aW9uIHJlbmRlcl9pbmxpbmUgKGN0eCwgdywgbWF4X2gpCglsb2NhbCBjdHJsID0gQ3RybFBvcnRzOmFycmF5ICgpIC0tIGdldCBjb250cm9sIHBvcnRzCgoJaWYgbm90IHR4dCB0aGVuCgkJLS0gYWxsb2NhdGUgUGFuZ29MYXlvdXQgYW5kIHNldCBmb250CgkJLS1odHRwOi8vbWFudWFsLmFyZG91ci5vcmcvbHVhLXNjcmlwdGluZy9jbGFzc19yZWZlcmVuY2UvI0NhaXJvOlBhbmdvTGF5b3V0CgkJdHh0ID0gQ2Fpcm8uUGFuZ29MYXlvdXQgKGN0eCwgIk1vbm8gOHB4IikKCWVuZAoKCXR4dDpzZXRfdGV4dCAoc3RyaW5nLmZvcm1hdCAoIiUrLjJmIGRCIiwgY3RybFsxXSkpOwoJdHcsIHRoID0gdHh0OmdldF9waXhlbF9zaXplICgpCgoJbG9jYWwgaCA9IHRoICsgNCAtLSB1c2UgdGV4dC1oZWlnaHQgd2l0aCA0cHggcGFkZGluZwoJaWYgKGggPiBtYXhfaCkgdGhlbiBoID0gbWF4X2ggZW5kIC0tIGJ1dCBhdCBtb3N0IG1heC1oZWlnaHQKCgktLSBjbGVhciBiYWNrZ3JvdW5kCgljdHg6cmVjdGFuZ2xlICgwLCAwLCB3LCBoKQoJY3R4OnNldF9zb3VyY2VfcmdiYSAoLjIsIC4yLCAuMiwgMS4wKQoJY3R4OmZpbGwgKCkKCgktLSBjZW50ZXIgdGV4dAoJY3R4OnNldF9zb3VyY2VfcmdiYSAoLjgsIC44LCAuOCwgMS4wKQoJY3R4Om1vdmVfdG8gKC41ICogKHcgLSB0dyksIC41ICogKGggLSB0aCkpCgl0eHQ6c2hvd19pbl9jYWlyb19jb250ZXh0IChjdHgpCgoJcmV0dXJuIHt3LCBofQplbmQKLS1dXQo=</script>
+      <Port id="0" value="0"/>
+    </luaproc>
+    <Controllable name="Gain" id="10209" flags="" value="0" parameter="0"/>
+  </Processor>
+  <Processor id="8376" name="ACE Compressor" active="1" user-latency="0" use-user-latency="0" type="lv2" unique-id="urn:ardour:a-comp" count="2" custom="0">
+    <Automation>
+      <AutomationList automation-id="parameter-0" id="8377" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-1" id="8379" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-2" id="8381" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-3" id="8383" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-4" id="8385" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-5" id="8387" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-9" id="8389" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-10" id="8391" interpolation-style="Discrete" state="Off"/>
+    </Automation>
+    <ConfiguredInput>
+      <Channels type="audio" count="2"/>
+    </ConfiguredInput>
+    <CustomSinks>
+      <Channels type="audio" count="2"/>
+    </CustomSinks>
+    <ConfiguredOutput>
+      <Channels type="audio" count="2"/>
+    </ConfiguredOutput>
+    <PresetOutput/>
+    <InputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+      <Channelmap type="audio" from="1" to="2"/>
+    </InputMap-0>
+    <OutputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+    </OutputMap-0>
+    <InputMap-1>
+      <Channelmap type="audio" from="0" to="1"/>
+      <Channelmap type="audio" from="1" to="2"/>
+    </InputMap-1>
+    <OutputMap-1>
+      <Channelmap type="audio" from="0" to="1"/>
+    </OutputMap-1>
+    <ThruMap/>
+    <Processor id="8393" name="SC Stereo Audio Track With ACE Effects/ACE Compressor 9" active="1" user-latency="0" use-user-latency="0" own-input="1" own-output="1" type="sidechain">
+      <IO name="SC Stereo Audio Track With ACE Effects/ACE Compressor 9" id="8394" direction="Input" default-type="audio" pretty-name="SC ACE Compressor">
+        <Port type="audio" name="SC Stereo Audio Track With ACE Effects/ACE Compressor 9/audio_in 1"/>
+      </IO>
+    </Processor>
+    <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1" template-dir="/home/piotr/.config/ardour6/route_templates/Stereo Audio Track With ACE Effects">
+      <Port symbol="att" value="10"/>
+      <Port symbol="rel" value="80"/>
+      <Port symbol="kn" value="0"/>
+      <Port symbol="rat" value="4"/>
+      <Port symbol="thr" value="0"/>
+      <Port symbol="mak" value="0"/>
+      <Port symbol="sidech" value="0"/>
+      <Port symbol="enable" value="1"/>
+    </lv2>
+    <Controllable name="Attack" id="8378" flags="" value="10" parameter="0" symbol="att"/>
+    <Controllable name="Release" id="8380" flags="" value="80" parameter="1" symbol="rel"/>
+    <Controllable name="Knee" id="8382" flags="" value="0" parameter="2" symbol="kn"/>
+    <Controllable name="Ratio" id="8384" flags="" value="4" parameter="3" symbol="rat"/>
+    <Controllable name="Threshold" id="8386" flags="" value="0" parameter="4" symbol="thr"/>
+    <Controllable name="Makeup" id="8388" flags="" value="0" parameter="5" symbol="mak"/>
+    <Controllable name="Sidechain" id="8390" flags="Toggle" value="0" parameter="9" symbol="sidech"/>
+    <Controllable name="Enable" id="8392" flags="Toggle" value="1" parameter="10" symbol="enable"/>
+  </Processor>
+  <Processor id="8399" name="ACE Reverb" active="1" user-latency="0" use-user-latency="0" type="lv2" unique-id="urn:ardour:a-reverb" count="1" custom="0">
+    <Automation>
+      <AutomationList automation-id="parameter-4" id="8400" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-5" id="8402" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-6" id="8404" interpolation-style="Discrete" state="Off"/>
+    </Automation>
+    <ConfiguredInput>
+      <Channels type="audio" count="2"/>
+    </ConfiguredInput>
+    <CustomSinks>
+      <Channels type="audio" count="2"/>
+    </CustomSinks>
+    <ConfiguredOutput>
+      <Channels type="audio" count="2"/>
+    </ConfiguredOutput>
+    <PresetOutput/>
+    <InputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+      <Channelmap type="audio" from="1" to="1"/>
+    </InputMap-0>
+    <OutputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+      <Channelmap type="audio" from="1" to="1"/>
+    </OutputMap-0>
+    <ThruMap/>
+    <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" template-dir="/home/piotr/.config/ardour6/route_templates/Stereo Audio Track With ACE Effects">
+      <Port symbol="blend" value="0.30000001192092896"/>
+      <Port symbol="roomsz" value="0.5"/>
+      <Port symbol="enable" value="1"/>
+    </lv2>
+    <Controllable name="Blend" id="8401" flags="" value="0.30000001192092896" parameter="4" symbol="blend"/>
+    <Controllable name="Room Size" id="8403" flags="" value="0.5" parameter="5" symbol="roomsz"/>
+    <Controllable name="Enable" id="8405" flags="Toggle" value="1" parameter="6" symbol="enable"/>
+  </Processor>
+  <Processor id="8409" name="ACE EQ" active="1" user-latency="0" use-user-latency="0" type="lv2" unique-id="urn:ardour:a-eq" count="2" custom="0">
+    <Automation>
+      <AutomationList automation-id="parameter-0" id="8410" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-1" id="8412" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-2" id="8414" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-3" id="8416" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-4" id="8418" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-5" id="8420" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-6" id="8422" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-7" id="8424" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-8" id="8426" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-9" id="8428" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-10" id="8430" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-11" id="8432" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-12" id="8434" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-13" id="8436" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-14" id="8438" interpolation-style="Logarithmic" state="Off"/>
+      <AutomationList automation-id="parameter-15" id="8440" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-16" id="8442" interpolation-style="Linear" state="Off"/>
+      <AutomationList automation-id="parameter-17" id="8444" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-18" id="8446" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-19" id="8448" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-20" id="8450" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-21" id="8452" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-22" id="8454" interpolation-style="Discrete" state="Off"/>
+      <AutomationList automation-id="parameter-23" id="8456" interpolation-style="Discrete" state="Off"/>
+    </Automation>
+    <ConfiguredInput>
+      <Channels type="audio" count="2"/>
+    </ConfiguredInput>
+    <CustomSinks>
+      <Channels type="audio" count="1"/>
+    </CustomSinks>
+    <ConfiguredOutput>
+      <Channels type="audio" count="2"/>
+    </ConfiguredOutput>
+    <PresetOutput/>
+    <InputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+    </InputMap-0>
+    <OutputMap-0>
+      <Channelmap type="audio" from="0" to="0"/>
+    </OutputMap-0>
+    <InputMap-1>
+      <Channelmap type="audio" from="0" to="1"/>
+    </InputMap-1>
+    <OutputMap-1>
+      <Channelmap type="audio" from="0" to="1"/>
+    </OutputMap-1>
+    <ThruMap/>
+    <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" template-dir="/home/piotr/.config/ardour6/route_templates/Stereo Audio Track With ACE Effects">
+      <Port symbol="freql" value="160"/>
+      <Port symbol="gl" value="0"/>
+      <Port symbol="freq1" value="300"/>
+      <Port symbol="g1" value="0"/>
+      <Port symbol="bw1" value="1"/>
+      <Port symbol="freq2" value="1000"/>
+      <Port symbol="g2" value="0"/>
+      <Port symbol="bw2" value="1"/>
+      <Port symbol="freq3" value="2500"/>
+      <Port symbol="g3" value="0"/>
+      <Port symbol="bw3" value="1"/>
+      <Port symbol="freq4" value="6000"/>
+      <Port symbol="g4" value="0"/>
+      <Port symbol="bw4" value="1"/>
+      <Port symbol="freqh" value="9000"/>
+      <Port symbol="gh" value="0"/>
+      <Port symbol="master" value="0"/>
+      <Port symbol="filtogl" value="1"/>
+      <Port symbol="filtog1" value="1"/>
+      <Port symbol="filtog2" value="1"/>
+      <Port symbol="filtog3" value="1"/>
+      <Port symbol="filtog4" value="1"/>
+      <Port symbol="filtogh" value="1"/>
+      <Port symbol="enable" value="1"/>
+    </lv2>
+    <Controllable name="Frequency L" id="8411" flags="" value="160" parameter="0" symbol="freql"/>
+    <Controllable name="Gain L" id="8413" flags="" value="0" parameter="1" symbol="gl"/>
+    <Controllable name="Frequency 1" id="8415" flags="" value="300" parameter="2" symbol="freq1"/>
+    <Controllable name="Gain 1" id="8417" flags="" value="0" parameter="3" symbol="g1"/>
+    <Controllable name="Bandwidth 1" id="8419" flags="" value="1" parameter="4" symbol="bw1"/>
+    <Controllable name="Frequency 2" id="8421" flags="" value="1000" parameter="5" symbol="freq2"/>
+    <Controllable name="Gain 2" id="8423" flags="" value="0" parameter="6" symbol="g2"/>
+    <Controllable name="Bandwidth 2" id="8425" flags="" value="1" parameter="7" symbol="bw2"/>
+    <Controllable name="Frequency 3" id="8427" flags="" value="2500" parameter="8" symbol="freq3"/>
+    <Controllable name="Gain 3" id="8429" flags="" value="0" parameter="9" symbol="g3"/>
+    <Controllable name="Bandwidth 3" id="8431" flags="" value="1" parameter="10" symbol="bw3"/>
+    <Controllable name="Frequency 4" id="8433" flags="" value="6000" parameter="11" symbol="freq4"/>
+    <Controllable name="Gain 4" id="8435" flags="" value="0" parameter="12" symbol="g4"/>
+    <Controllable name="Bandwidth 4" id="8437" flags="" value="1" parameter="13" symbol="bw4"/>
+    <Controllable name="Frequency H" id="8439" flags="" value="9000" parameter="14" symbol="freqh"/>
+    <Controllable name="Gain H" id="8441" flags="" value="0" parameter="15" symbol="gh"/>
+    <Controllable name="Master Gain" id="8443" flags="" value="0" parameter="16" symbol="master"/>
+    <Controllable name="Filter L" id="8445" flags="Toggle" value="1" parameter="17" symbol="filtogl"/>
+    <Controllable name="Filter 1" id="8447" flags="Toggle" value="1" parameter="18" symbol="filtog1"/>
+    <Controllable name="Filter 2" id="8449" flags="Toggle" value="1" parameter="19" symbol="filtog2"/>
+    <Controllable name="Filter 3" id="8451" flags="Toggle" value="1" parameter="20" symbol="filtog3"/>
+    <Controllable name="Filter 4" id="8453" flags="Toggle" value="1" parameter="21" symbol="filtog4"/>
+    <Controllable name="Filter H" id="8455" flags="Toggle" value="1" parameter="22" symbol="filtogh"/>
+    <Controllable name="Enable" id="8457" flags="Toggle" value="1" parameter="23" symbol="enable"/>
+  </Processor>
+  <Processor id="8348" name="meter-Audio 1" active="1" user-latency="0" use-user-latency="0" type="meter"/>
+  <Processor id="8349" name="Stereo Audio Track With ACE Effects" active="1" user-latency="0" use-user-latency="0" own-input="1" own-output="0" output="Stereo Audio Track With ACE Effects" type="main-outs" role="Main">
+    <PannerShell bypassed="0" user-panner="" linked-to-route="1"/>
+  </Processor>
+  <Slavable/>
+  <Controllable name="monitor" id="8358" flags="RealTime" value="0" monitoring=""/>
+  <Controllable name="rec-safe" id="8356" flags="Toggle,RealTime" value="0"/>
+  <Controllable name="rec-enable" id="8354" flags="Toggle,RealTime" value="0"/>
+</Route>

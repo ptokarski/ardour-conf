@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArdourMIDIBindings version="1.1.0" name="Korg nanoKONTROL2 Eq">
+
+  <DeviceInfo bank-size="1" />
+
+  <Binding channel="1" ctl="41" function="transport-roll" />
+  <Binding channel="1" ctl="42" function="transport-stop" />
+  <Binding channel="1" ctl="43" action="Transport/Rewind" />
+  <Binding channel="1" ctl="44" action="Transport/Forward" />
+  <Binding channel="1" ctl="45" function="toggle-rec-enable" />
+  <Binding channel="1" ctl="46" function="loop-toggle" />
+  <Binding msg="B0 3c 7f" action="Common/add-location-from-playhead" />
+  <Binding msg="B0 3d 7f" action="Common/jump-backward-to-mark" />
+  <Binding msg="B0 3e 7f" action="Common/jump-forward-to-mark" />
+  <Binding msg="B0 3a 7f" function="prev-bank" />
+  <Binding msg="B0 3b 7f" function="next-bank" />
+
+  <!-- Low Shelf Filter -->
+  <Binding channel="1" ctl="16" uri="/route/plugin/parameter B1 3 1" />   <!-- Frequency -->
+  <Binding channel="1" ctl="0" uri="/route/plugin/parameter B1 3 2" />    <!-- Gain -->
+  <Binding channel="1" ctl="64" uri="/route/plugin/parameter B1 3 18" />  <!-- Switch -->
+  <!-- Filter 1 -->
+  <Binding channel="1" ctl="17" uri="/route/plugin/parameter B1 3 3" />   <!-- Frequency -->
+  <Binding channel="1" ctl="1" uri="/route/plugin/parameter B1 3 4" />    <!-- Gain -->
+  <Binding channel="1" ctl="65" uri="/route/plugin/parameter B1 3 19" />  <!-- Switch -->
+  <!-- Filter 2 -->
+  <Binding channel="1" ctl="18" uri="/route/plugin/parameter B1 3 6" />   <!-- Frequency -->
+  <Binding channel="1" ctl="2" uri="/route/plugin/parameter B1 3 7" />    <!-- Gain -->
+  <Binding channel="1" ctl="66" uri="/route/plugin/parameter B1 3 20" />  <!-- Switch -->
+  <!-- Filter 3 -->
+  <Binding channel="1" ctl="19" uri="/route/plugin/parameter B1 3 9" />   <!-- Frequency -->
+  <Binding channel="1" ctl="3" uri="/route/plugin/parameter B1 3 10" />   <!-- Gain -->
+  <Binding channel="1" ctl="67" uri="/route/plugin/parameter B1 3 21" />  <!-- Switch -->
+  <!-- Filter 4 -->
+  <Binding channel="1" ctl="20" uri="/route/plugin/parameter B1 3 12" />  <!-- Frequency -->
+  <Binding channel="1" ctl="4" uri="/route/plugin/parameter B1 3 13" />   <!-- Gain -->
+  <Binding channel="1" ctl="68" uri="/route/plugin/parameter B1 3 22" />  <!-- Switch -->
+  <!-- High Shelf Filter -->
+  <Binding channel="1" ctl="21" uri="/route/plugin/parameter B1 3 15" />  <!-- Frequency -->
+  <Binding channel="1" ctl="5" uri="/route/plugin/parameter B1 3 16" />   <!-- Gain -->
+  <Binding channel="1" ctl="69" uri="/route/plugin/parameter B1 3 23" />  <!-- Switch -->
+  
+  <Binding channel="1" ctl="22" uri="/route/pandirection B1" />
+  <Binding channel="1" ctl="38" uri="/route/solo B1" />
+  <Binding channel="1" ctl="54" uri="/route/mute B1" />
+  <Binding channel="1" ctl="70" uri="/route/recenable B1" />
+  <Binding channel="1" ctl="6" uri="/route/gain B1" />
+
+  <Binding channel="1" ctl="23" uri="/bus/panwidth Master" />
+  <Binding channel="1" ctl="7" uri="/bus/gain Master" />
+  <Binding channel="1" ctl="55" uri="/bus/mute Master" />
+  <Binding channel="1" ctl="71" function="toggle-rec-enable" />
+
+</ArdourMIDIBindings>
+

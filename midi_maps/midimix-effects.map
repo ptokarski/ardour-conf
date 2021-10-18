@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArdourMIDIBindings version="1.1.0" name="AKAI MidiMix Effects">
+
+  <DeviceInfo bank-size="1" />
+
+  <Binding channel="1" note="25" function="prev-bank" />
+  <Binding channel="1" note="26" function="next-bank" />
+
+  <!-- ACE Compressor as Effect #2 -->
+  <Binding channel="1" ctl="16" uri="/route/plugin/parameter B1 2 1" />   <!-- Attack -->
+  <Binding channel="1" ctl="20" uri="/route/plugin/parameter B1 2 2" />   <!-- Release -->
+  <Binding channel="1" ctl="24" uri="/route/plugin/parameter B1 2 3" />   <!-- Knee -->
+  <Binding channel="1" ctl="28" uri="/route/plugin/parameter B1 2 4" />   <!-- Ratio -->
+  <Binding channel="1" ctl="46" uri="/route/plugin/parameter B1 2 5" />   <!-- Threshold -->
+  <Binding channel="1" ctl="50" uri="/route/plugin/parameter B1 2 6" />   <!-- Makeup -->
+
+  <!-- ACE Delay as Effect #3 -->
+  <Binding channel="1" ctl="54" uri="/route/plugin/parameter B1 3 1" />    <!-- Blend -->
+  <Binding channel="1" ctl="58" uri="/route/plugin/parameter B1 3 2" />    <!-- Room Size -->
+
+  <!-- ACE EQ as Effect #4 -->
+  <!-- Low Shelf Filter -->
+  <Binding channel="1" ctl="18" uri="/route/plugin/parameter B1 4 1" />    <!-- Frequency -->
+  <Binding channel="1" ctl="19" uri="/route/plugin/parameter B1 4 2" />    <!-- Gain -->
+  <Binding channel="1" note="3" uri="/route/plugin/parameter B1 4 18" />   <!-- Switch -->
+  <!-- Filter 1 -->
+  <Binding channel="1" ctl="22" uri="/route/plugin/parameter B1 4 3" />    <!-- Frequency -->
+  <Binding channel="1" ctl="23" uri="/route/plugin/parameter B1 4 4" />    <!-- Gain -->
+  <Binding channel="1" ctl="21" uri="/route/plugin/parameter B1 4 5" />    <!-- Bandwidth -->
+  <Binding channel="1" note="6" uri="/route/plugin/parameter B1 4 19" />   <!-- Switch -->
+  <!-- Filter 2 -->
+  <Binding channel="1" ctl="26" uri="/route/plugin/parameter B1 4 6" />    <!-- Frequency -->
+  <Binding channel="1" ctl="27" uri="/route/plugin/parameter B1 4 7" />    <!-- Gain -->
+  <Binding channel="1" ctl="25" uri="/route/plugin/parameter B1 4 8" />    <!-- Bandwidth -->
+  <Binding channel="1" note="9" uri="/route/plugin/parameter B1 4 20" />   <!-- Switch -->
+  <!-- Filter 3 -->
+  <Binding channel="1" ctl="30" uri="/route/plugin/parameter B1 4 9" />    <!-- Frequency -->
+  <Binding channel="1" ctl="31" uri="/route/plugin/parameter B1 4 10" />   <!-- Gain -->
+  <Binding channel="1" ctl="29" uri="/route/plugin/parameter B1 4 11" />   <!-- Bandwidth -->
+  <Binding channel="1" note="12" uri="/route/plugin/parameter B1 4 21" />  <!-- Switch -->
+  <!-- Filter 4 -->
+  <Binding channel="1" ctl="48" uri="/route/plugin/parameter B1 4 12" />   <!-- Frequency -->
+  <Binding channel="1" ctl="49" uri="/route/plugin/parameter B1 4 13" />   <!-- Gain -->
+  <Binding channel="1" ctl="47" uri="/route/plugin/parameter B1 4 14" />   <!-- Bandwidth -->
+  <Binding channel="1" note="15" uri="/route/plugin/parameter B1 4 22" />  <!-- Switch -->
+  <!-- High Shelf Filter -->
+  <Binding channel="1" ctl="52" uri="/route/plugin/parameter B1 4 15" />   <!-- Frequency -->
+  <Binding channel="1" ctl="53" uri="/route/plugin/parameter B1 4 16" />   <!-- Gain -->
+  <Binding channel="1" note="18" uri="/route/plugin/parameter B1 4 23" />  <!-- Switch -->
+
+  <Binding channel="1" ctl="55" uri="/route/panwidth B1" />
+  <Binding channel="1" ctl="56" uri="/route/pandirection B1" />
+  <Binding channel="1" ctl="57" uri="/route/gain B1" />
+  <Binding channel="1" note="27" uri="/route/solo B1" />
+  <Binding channel="1" note="19" uri="/route/mute B1" />
+  <Binding channel="1" note="21" uri="/route/recenable B1" />
+
+  <Binding channel="1" ctl="59" uri="/bus/panwidth Master" />
+  <Binding channel="1" ctl="60" uri="/bus/pandirection Master" />
+  <Binding channel="1" ctl="61" uri="/bus/gain Master" />
+  <Binding channel="1" ctl="62" uri="/bus/gain Master" />
+  <Binding channel="1" note="22" uri="/bus/mute Master" />
+  <Binding channel="1" note="24" function="toggle-rec-enable" />
+
+</ArdourMIDIBindings>
+
